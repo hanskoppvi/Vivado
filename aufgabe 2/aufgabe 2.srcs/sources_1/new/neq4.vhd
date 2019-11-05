@@ -76,21 +76,19 @@ begin
 end logic;
 
 architecture netlist of neq4 is
+
     component xor22 
         Port (X1,X2 : in bit; XY : out bit); 
      end component;
+    signal temp : bit_vector( 3 downto 0);
+   
+begin  
+    xor_instance1 : xor22 port map (A(0), B(0), temp(0));
+    xor_instance2 : xor22 port map (A(1), B(1), temp(1));
+    xor_instance3 : xor22 port map (A(2), B(2), temp(2));
+    xor_instance4 : xor22 port map (A(3), B(3), temp(3));
 
-begin
-    
- xor_instance1 : xor22 port map (A(0), B(0) , Y);
- xor_instance2 : xor22 port map (A, B , Y);
-
- xor_instance3: xor22 port map (A, B , Y);
-
- xor_instance4: xor22 port map (A, B , Y);
-
-
-
+Y <= temp(0) or temp(1) or temp(2) or temp(3);
   
 end netlist;
 
