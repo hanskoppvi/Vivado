@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Oct 17 08:59:44 2019
+# Process ID: 8372
+# Current directory: C:/Users/s0560839/Desktop/Vivado Labs/or2_gatter/or2_gatter.runs/synth_1
+# Command line: vivado.exe -log or2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source or2.tcl
+# Log file: C:/Users/s0560839/Desktop/Vivado Labs/or2_gatter/or2_gatter.runs/synth_1/or2.vds
+# Journal file: C:/Users/s0560839/Desktop/Vivado Labs/or2_gatter/or2_gatter.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source or2.tcl -notrace
