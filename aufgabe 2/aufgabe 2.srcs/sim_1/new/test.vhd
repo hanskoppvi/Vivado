@@ -50,16 +50,16 @@ port map( A => x,
           Y => z);
 
 
-x <= "0000" after 10 ns,
-     "1111" after 10 ns;
- --    "1010" after 10 ns,
-  --   "0101" after 10 ns,
-  --   "1100" after 10 ns;
-     
-d <= "0000" after 10 ns,
+x <= "0000",
      "1111" after 10 ns,
-     "0101" after 10 ns,
-     "1010" after 10 ns,
-     "0011" after 10 ns;
+     "1010" after 20 ns,
+     "0101" after 30 ns,
+     "1100" after 40 ns;
+     
+d <= "0000",
+     "1111" after 10 ns,
+     "0101" after 20 ns,
+     "1010" after 30 ns,
+     "0011" after 40 ns;
 
 end Behavioral;

@@ -81,6 +81,7 @@ architecture netlist of neq4 is
         Port (X1,X2 : in bit; XY : out bit); 
      end component;
     signal temp : bit_vector( 3 downto 0);
+    --shared variable temp : bit_vector( 3 downto 0);
    
 begin  
     xor_instance1 : xor22 port map (A(0), B(0), temp(0));
