@@ -51,10 +51,10 @@ begin
     y       <= Layer3 (7  downto 0)  & "00000000" when pos(3) = '1' else Layer3;
     
     -- Rechts
-    Layer1  <= a      (15 downto 1)  & '0'        when pos(0) = '1' else a;
-    Layer2  <= Layer1 (15 downto 2)  & "00"       when pos(1) = '1' else Layer1;
-    Layer3  <= Layer2 (15 downto 4)  & "0000"     when pos(2) = '1' else Layer2;
-    y       <= Layer3 (15 downto 8)  & "00000000" when pos(3) = '1' else Layer3;
+    Layer1  <= '0'        & a      (15 downto 1) when pos(0) = '1' else a;
+    Layer2  <= "00"       & Layer1 (15 downto 2) when pos(1) = '1' else Layer1;
+    Layer3  <= "0000"     & Layer2 (15 downto 4) when pos(2) = '1' else Layer2;
+    y       <= "00000000" & Layer3 (15 downto 8) when pos(3) = '1' else Layer3;
     
 
 
