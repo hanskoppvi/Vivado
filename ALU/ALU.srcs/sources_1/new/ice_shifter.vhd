@@ -45,16 +45,16 @@ architecture Behavioral of ice_shifter is
 begin
 
     -- Links
-    Layer1  <= a      (14 downto 0)  & '0'        when pos(0) = '1' else a;
-    Layer2  <= Layer1 (13 downto 0)  & "00"       when pos(1) = '1' else Layer1;
-    Layer3  <= Layer2 (11 downto 0)  & "0000"     when pos(2) = '1' else Layer2;
-    y       <= Layer3 (7  downto 0)  & "00000000" when pos(3) = '1' else Layer3;
+    Layer1  <= a      (14 downto 0)  & '0'        when pos(0) = '1' and opc = "0000" else a;
+    Layer2  <= Layer1 (13 downto 0)  & "00"       when pos(1) = '1' and opc = "0000" else Layer1;
+    Layer3  <= Layer2 (11 downto 0)  & "0000"     when pos(2) = '1' and opc = "0000" else Layer2;
+    y       <= Layer3 (7  downto 0)  & "00000000" when pos(3) = '1' and opc = "0000" else Layer3;
     
     -- Rechts
-    Layer1  <= '0'        & a      (15 downto 1) when pos(0) = '1' else a;
-    Layer2  <= "00"       & Layer1 (15 downto 2) when pos(1) = '1' else Layer1;
-    Layer3  <= "0000"     & Layer2 (15 downto 4) when pos(2) = '1' else Layer2;
-    y       <= "00000000" & Layer3 (15 downto 8) when pos(3) = '1' else Layer3;
+    Layer1  <= '0'        & a      (15 downto 1) when pos(0) = '1' and opc = "0001" else a;
+    Layer2  <= "00"       & Layer1 (15 downto 2) when pos(1) = '1' and opc = "0001" else Layer1;
+    Layer3  <= "0000"     & Layer2 (15 downto 4) when pos(2) = '1' and opc = "0001" else Layer2;
+    y       <= "00000000" & Layer3 (15 downto 8) when pos(3) = '1' and opc = "0001" else Layer3;
     
 
 
