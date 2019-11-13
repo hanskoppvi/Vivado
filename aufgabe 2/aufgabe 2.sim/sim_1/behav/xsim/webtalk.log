@@ -2,8 +2,8 @@
 # Webtalk v2019.2 (64-bit)
 # SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
 # IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
-# Start of session at: Tue Nov  5 18:25:05 2019
-# Process ID: 7300
+# Start of session at: Thu Nov  7 09:08:48 2019
+# Process ID: 16260
 # Current directory: D:/Datos/Desktop/Vivado/Vivado/aufgabe 2/aufgabe 2.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source D:/Datos/Desktop/Vivado/Vivado/aufgabe 2/aufgabe 2.sim/sim_1/behav/xsim/xsim.dir/test_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: D:/Datos/Desktop/Vivado/Vivado/aufgabe 2/aufgabe 2.sim/sim_1/behav/xsim/webtalk.log
@@ -11,4 +11,4 @@
 #-----------------------------------------------------------
 source D:/Datos/Desktop/Vivado/Vivado/aufgabe -notrace
 couldn't read file "D:/Datos/Desktop/Vivado/Vivado/aufgabe": permission denied
-INFO: [Common 17-206] Exiting Webtalk at Tue Nov  5 18:25:05 2019...
+INFO: [Common 17-206] Exiting Webtalk at Thu Nov  7 09:08:48 2019...

@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
+# IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
+# Start of session at: Thu Nov  7 09:10:29 2019
+# Process ID: 12660
+# Current directory: D:/Datos/Desktop/Vivado/Vivado/aufgabe 2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7988 D:\Datos\Desktop\Vivado\Vivado\aufgabe 2\aufgabe 2.xpr
+# Log file: D:/Datos/Desktop/Vivado/Vivado/aufgabe 2/vivado.log
+# Journal file: D:/Datos/Desktop/Vivado/Vivado/aufgabe 2\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/Datos/Desktop/Vivado/Vivado/aufgabe 2/aufgabe 2.xpr}
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programas/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:48 ; elapsed = 00:00:22 . Memory (MB): peak = 883.852 ; gain = 241.754
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: "D:/Datos/Desktop/Vivado/Vivado/aufgabe 2/aufgabe 2.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: "D:/Datos/Desktop/Vivado/Vivado/aufgabe 2/aufgabe 2.sim/sim_1/behav/xsim/simulate.log"
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  7 09:12:22 2019...

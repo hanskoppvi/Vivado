@@ -44,7 +44,7 @@ signal z : bit;
 
 begin
 
-dut: entity work.neq4
+dut: entity work.neq4(netlist)
 port map( A => x,  
           b => d,
           Y => z);
