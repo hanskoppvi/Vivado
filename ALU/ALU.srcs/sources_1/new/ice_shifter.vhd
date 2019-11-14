@@ -42,38 +42,43 @@ end ice_shifter;
 architecture Behavioral of ice_shifter is
 
     signal Layer1, Layer2, Layer3 : STD_LOGIC_VECTOR (15 downto 0);
+    signal temp : STD_LOGIC_VECTOR (15 downto 0);
 begin
 
-    -- Links
-    Layer1  <= a      (14 downto 0)  & '0'        when pos(0) = '1' and opc = "0000" else a;
-    Layer2  <= Layer1 (13 downto 0)  & "00"       when pos(1) = '1' and opc = "0000" else Layer1;
-    Layer3  <= Layer2 (11 downto 0)  & "0000"     when pos(2) = '1' and opc = "0000" else Layer2;
-    y       <= Layer3 (7  downto 0)  & "00000000" when pos(3) = '1' and opc = "0000" else Layer3;
     
-    -- Rechts
-    Layer1  <= '0'        & a      (15 downto 1) when pos(0) = '1' and opc = "0001" else a;
-    Layer2  <= "00"       & Layer1 (15 downto 2) when pos(1) = '1' and opc = "0001" else Layer1;
-    Layer3  <= "0000"     & Layer2 (15 downto 4) when pos(2) = '1' and opc = "0001" else Layer2;
-    y       <= "00000000" & Layer3 (15 downto 8) when pos(3) = '1' and opc = "0001" else Layer3;
-    
-    -- Ari Rechts
-    Layer1  <= ('0' or a(15))             & a      (15 downto 1) when pos(0) = '1' and opc = "0010" else a;
-    Layer2  <= ('0' or a(15)) & '0'       & Layer1 (15 downto 2) when pos(1) = '1' and opc = "0010" else Layer1;
-    Layer3  <= ('0' or a(15)) & "000"     & Layer2 (15 downto 4) when pos(2) = '1' and opc = "0010" else Layer2;
-    y       <= ('0' or a(15)) & "0000000" & Layer3 (15 downto 8) when pos(3) = '1' and opc = "0010" else Layer3;
-    
-    -- Links Rollen
-    Layer1  <= a      (14 downto 0) & a      (15)            when pos(0) = '1' and opc = "0011" else a;
-    Layer2  <= Layer1 (13 downto 0) & Layer1 (15 downto 14)  when pos(1) = '1' and opc = "0011" else Layer1;
-    Layer3  <= Layer2 (11 downto 0) & Layer2 (15 downto 12)  when pos(2) = '1' and opc = "0011" else Layer2;
-    y       <= Layer3 (7  downto 0) & Layer3 (15 downto 8)   when pos(3) = '1' and opc = "0011" else Layer3;
-    
-    -- Rechts Rollen
-    Layer1  <= a      (0)          & a      (15 downto 1)  when pos(0) = '1' and opc = "0100" else a;
-    Layer2  <= Layer1 (1 downto 0) & Layer1 (15 downto 2)  when pos(1) = '1' and opc = "0100" else Layer1;
-    Layer3  <= Layer2 (3 downto 0) & Layer2 (15 downto 4)  when pos(2) = '1' and opc = "0100" else Layer2;
-    y       <= Layer3 (7 downto 0) & Layer3 (15 downto 8)  when pos(3) = '1' and opc = "0100" else Layer3;
-    
-    
+    with (pos(0) & opc) select -- Layer1
+        Layer1  <= 
+                a(14 downto 0) & '0'            when "10000",           --LSL
+                '0'            & a(15 downto 1) when "10001" | "10010", --LSR and ASL
+                a(14 downto 0) & a(15)          when "10011",           --ROL
+                a(0)           & a(15 downto 1) when "10100",           --ROR
+                a when others;
+                
+     with (pos(1) & opc) select       
+        Layer2 <=  
+                Layer1 (13 downto 0) & "00"                  when "10000",           --LSL
+                "00"                 & Layer1 (15 downto 2)  when "10001" | "10010", --LSR and ASL
+                Layer1 (13 downto 0) & Layer1 (15 downto 14) when "10011",           --ROL
+                Layer1 (1 downto 0)  & Layer1 (15 downto 2)  when "10100",           --ROR
+                Layer1 when others;
+                
+     with (pos(2) & opc) select
+        Layer3 <= 
+                Layer2 (11 downto 0) & "0000"                when"10000",            --LSL
+                "0000"               & Layer2 (15 downto 4)  when "10001" | "10010", --LSR and ASR
+                Layer2 (11 downto 0) & Layer2 (15 downto 12) when "10011",           --ROL
+                Layer2 (3 downto 0)  & Layer2 (15 downto 4)  when "10100",           --ROR   
+                Layer2 when others;
+                
+      with (pos(3) & opc) select
+        temp <= 
+                Layer3 (7  downto 0) & "00000000"           when "10000",           --LSL
+                "00000000"           & Layer3 (15 downto 8) when "10001" | "10010", --LSR and ASL
+                Layer3 (7  downto 0) & Layer3 (15 downto 8) when "10011",           --ROL
+                Layer3 (7 downto 0)  & Layer3 (15 downto 8) when "10100",           --ROR
+                Layer3 when others;
+                            
+        
+        Y <= a(15) & temp(14 downto 0) when opc = "0010" else temp;
 
 end Behavioral;
