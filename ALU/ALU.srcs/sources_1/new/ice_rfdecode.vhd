@@ -57,6 +57,8 @@ begin
            "0000100000000000" when addr = "1100" and en = '1' else
            "0001000000000000" when addr = "1101" and en = '1' else
            "0010000000000000" when addr = "1110" and en = '1' else
-           "0100000000000000" when addr = "1111";
+           "0100000000000000" when addr = "1111" and en = '1' else
+           "0000000000000000";
+           
            
 end Behavioral;

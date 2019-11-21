@@ -32,10 +32,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity RealTestShi is
-    --Port ( TestA   : in  STD_LOGIC;
-      --     TestOpc : in  STD_LOGIC;
-        --   Testpos : in  STD_LOGIC;
-          -- TestY   : out STD_LOGIC);
+
 end RealTestShi;
 
 architecture Behavioral of RealTestShi is
