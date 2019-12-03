@@ -1,6 +1,6 @@
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: D:/Programas/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 87de4d4f53f04e13840802cf952b5e33 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot test_decode_behav xil_defaultlib.test_decode -log elaborate.log 
+Running: D:/Programas/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 87de4d4f53f04e13840802cf952b5e33 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot test_alu_pc_behav xil_defaultlib.test_alu_pc -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -10,6 +10,7 @@ Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
-Compiling architecture behavioral of entity xil_defaultlib.ice_rfdecode [ice_rfdecode_default]
-Compiling architecture behavioral of entity xil_defaultlib.test_decode
-Built simulation snapshot test_decode_behav
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.ice_pc [ice_pc_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_alu_pc
+Built simulation snapshot test_alu_pc_behav
