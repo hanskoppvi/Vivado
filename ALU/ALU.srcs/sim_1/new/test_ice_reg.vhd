@@ -64,9 +64,8 @@ begin
                 not s_clk after 25 ns,
                 not s_clk after 30 ns;
        
-       s_reset <=  '0', 
-                   '1' after 10 ns,
-                   '0' after 15 ns;
+       s_reset <=  '1', 
+                   '0' after 1 ns;
                 
                     
 end Behavioral;

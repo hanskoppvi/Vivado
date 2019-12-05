@@ -38,7 +38,7 @@ entity ice_pc is
            inc   : in  STD_LOGIC;
            load  : in  STD_LOGIC;
            imm   : in  STD_LOGIC_VECTOR (11 downto 0);
-           pc    : inout STD_LOGIC_VECTOR (11 downto 0));
+           pc    : out STD_LOGIC_VECTOR (11 downto 0));
 end ice_pc;
 
 architecture Behavioral of ice_pc is
