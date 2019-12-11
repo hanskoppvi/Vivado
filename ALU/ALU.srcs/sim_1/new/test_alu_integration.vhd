@@ -67,6 +67,7 @@ architecture Behavioral of test_alu_integration is
      signal s_grp : STD_LOGIC_VECTOR  (2 downto 0);
      signal s_opc : STD_LOGIC_VECTOR  (3 downto 0);
      signal s_reset_pc, s_reset_imem : STD_LOGIC;
+     
 begin
 
     ice_imem_ins : ice_imem Port map 
@@ -89,6 +90,24 @@ begin
       opc       => s_opc,
       pc_inc    => s_pc_inc,
       pc_load   => s_pc_load );
+    
+    
+    s_reset_imem <= '1', '0' after 1 ns;
+    s_reset_pc <= '1', '0' after 1 ns;
+
+    s_clk <= not s_clk after 5 ns;
+    
+    s_iaddr <= s_pc;
+    
+    s_imm_de <= s_instr(23);
+    s_grp <= s_instr(22 downto 20);
+    s_opc <= s_instr(19 downto 16);
+    
+    s_load <= s_pc_load;
+    s_inc <= s_pc_inc;
+    s_imm <= s_instr(11 downto 0);
+    
+    
     
     
 
