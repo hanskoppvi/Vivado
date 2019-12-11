@@ -43,8 +43,19 @@ architecture Behavioral of ice_idecode is
 
 begin
 
- pc_inc  <= '1' when grp = "000" and opc = "0000" else '0';
- pc_load <= '1' when grp = "000" and opc = "0000" else '0';
+-- pc_inc  <= '1' when grp = "000" and opc = "0000" else '0';
+ --pc_load <= '1' when grp = "000" and opc = "0000" else '0';
+ 
+ process(grp,opc)
+begin
+    if (grp = "000" and opc = "0000") then
+         pc_inc  <='1';
+         pc_load <='1' ;
+   else
+         pc_inc  <= '1';
+         pc_load <= '0';
+end if;
+end process;
        
 
 end Behavioral;

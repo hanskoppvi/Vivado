@@ -40,8 +40,8 @@ architecture Behavioral of test_alu_integration is
     component ice_imem
     Port ( clk   : in  STD_LOGIC;
            reset : in  STD_LOGIC;
-           iaddr : in  STD_LOGIC_VECTOR (11 downto 0);
-           instr : out STD_LOGIC_VECTOR (24 downto 0));
+           addr : in  STD_LOGIC_VECTOR (11 downto 0);
+           dout  : out STD_LOGIC_VECTOR (23 downto 0));
     end component;
     
     component ice_pc
@@ -61,11 +61,16 @@ architecture Behavioral of test_alu_integration is
            pc_load : out STD_LOGIC);
      end component;
      
-     signal s_clk,s_imm_de, s_load, s_inc, s_pc_inc, s_pc_load : STD_LOGIC;
+     
+     signal s_clk : STD_LOGIC := '0';
+     
+     signal s_imm_de, s_load, s_inc, s_pc_inc, s_pc_load : STD_LOGIC;
+     
      signal s_iaddr,s_imm, s_pc : STD_LOGIC_VECTOR (11 downto 0);
-     signal s_instr : STD_LOGIC_VECTOR (24 downto 0);
+     signal s_instr : STD_LOGIC_VECTOR (23 downto 0);
      signal s_grp : STD_LOGIC_VECTOR  (2 downto 0);
      signal s_opc : STD_LOGIC_VECTOR  (3 downto 0);
+     
      signal s_reset_pc, s_reset_imem : STD_LOGIC;
      
 begin
@@ -73,8 +78,8 @@ begin
     ice_imem_ins : ice_imem Port map 
     (clk   => s_clk, 
      reset => s_reset_imem,
-     iaddr => s_iaddr,
-     instr => s_instr);
+     addr => s_iaddr,
+     dout => s_instr);
     
     ice_pc_ins : ice_pc  Port map
     (clk    => s_clk,
@@ -91,13 +96,17 @@ begin
       pc_inc    => s_pc_inc,
       pc_load   => s_pc_load );
     
+    s_clk <= not s_clk after 5 ns;
+    
+    
     
     s_reset_imem <= '1', '0' after 1 ns;
     s_reset_pc <= '1', '0' after 1 ns;
 
-    s_clk <= not s_clk after 5 ns;
-    
+  
     s_iaddr <= s_pc;
+    
+    
     
     s_imm_de <= s_instr(23);
     s_grp <= s_instr(22 downto 20);
@@ -107,8 +116,7 @@ begin
     s_inc <= s_pc_inc;
     s_imm <= s_instr(11 downto 0);
     
-    
-    
+     
     
 
 end Behavioral;
