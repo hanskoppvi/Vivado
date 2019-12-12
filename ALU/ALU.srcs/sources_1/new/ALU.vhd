@@ -21,7 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
+use IEEE.STD_LOGIC_SIGNED.ALL;    
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 --use IEEE.NUMERIC_STD.ALL;
@@ -42,17 +42,48 @@ end ALU;
 
 architecture Behavioral of ALU is
 
+    signal temp_Y: STD_LOGIC_VECTOR (width -1 downto 0);
+
 begin
 
-    Y <= (a and b)  when  opc = "0000" else
-         (a or b)   when  opc = "0001" else   
-         (a nand b) when  opc = "0010" else
-         (a nor b)  when  opc = "0011" else
-         (a xor b)  when  opc = "0100" else
-         (a xnor b) when  opc = "0101" else
-         (not a)    when  opc = "0111" else
-         a; --when others;
+    process(anl,opc)
+        begin
+        if anl = '0' then
+        case (opc) is 
+            when "0000" => 
+                temp_Y <= (a and b);
+            when "0001" => 
+                temp_Y <= (a or b);   
+            when "0010" =>
+                temp_Y <= (a nand b);  
+            when "0011" =>
+                temp_Y <= (a nor b);
+            when "0100" =>
+                temp_Y <= (a xor b);
+            when "0101" =>
+                temp_Y <= (a xnor b);     
+            when "0110" =>
+                temp_Y <=  (not a);
+            when others =>
+                temp_Y <= a; 
+           end case;     
+         else
+          case (opc) is 
+            when "0000" => 
+                temp_Y <= (a + b);
+            when "0001" => 
+                temp_Y <= (a - b);   
+            when "0010" =>
+                temp_Y <= (a + 1);  
+            when "0011" =>
+                temp_Y <= (a - 1);
+             when others =>
+                temp_Y <= a;
+           end case;
+           end if;   
+     end process;
      
+     Y <= temp_Y;
          
          
 end Behavioral;

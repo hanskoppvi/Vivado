@@ -3,9 +3,13 @@
 Oct 24 2019
 19:01:44
 D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/RealTestShi.vhd,1574317279,vhdl,,,,realtestshi,,,,,,,,
+D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/test_alu.vhd,1576135955,vhdl,,,,test_alu,,,,,,,,
+D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/test_alu_cmp.vhd,1576139057,vhdl,,,,test_alu_cmp,,,,,,,,
 D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/test_alu_integration.vhd,1576091997,vhdl,,,,test_alu_integration,,,,,,,,
 D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/test_decode.vhd,1574319397,vhdl,,,,test_decode,,,,,,,,
 D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/test_ice_reg.vhd,1575531924,vhdl,,,,test_ice_reg,,,,,,,,
+D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sources_1/new/ALU.vhd,1576135133,vhdl,D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/test_alu.vhd,,,alu,,,,,,,,
+D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sources_1/new/ice_cmp.vhd,1576139221,vhdl,D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/test_alu_cmp.vhd,,,ice_cmp,,,,,,,,
 D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sources_1/new/ice_idecode.vhd,1576092537,vhdl,,,,ice_idecode,,,,,,,,
 D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sources_1/new/ice_imem.vhdl,1575532435,vhdl,,,,ice_imem,,,,,,,,
 D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sources_1/new/ice_pc.vhd,1575533594,vhdl,D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sources_1/new/test_alu_pc.vhd,,,ice_pc,,,,,,,,

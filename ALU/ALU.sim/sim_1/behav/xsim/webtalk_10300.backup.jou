@@ -2,11 +2,11 @@
 # Webtalk v2019.2 (64-bit)
 # SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
 # IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
-# Start of session at: Tue Dec  3 14:58:41 2019
-# Process ID: 17436
+# Start of session at: Thu Dec 12 08:39:00 2019
+# Process ID: 10300
 # Current directory: D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.sim/sim_1/behav/xsim/xsim.dir/test_alu_pc_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.sim/sim_1/behav/xsim/xsim.dir/test_alu_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.sim/sim_1/behav/xsim/xsim.dir/test_alu_pc_behav/webtalk/xsim_webtalk.tcl -notrace
+source D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.sim/sim_1/behav/xsim/xsim.dir/test_alu_behav/webtalk/xsim_webtalk.tcl -notrace
