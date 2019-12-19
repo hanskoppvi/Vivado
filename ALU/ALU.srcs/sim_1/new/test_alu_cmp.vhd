@@ -52,13 +52,29 @@ begin
                z => s_z,
                nz => s_nz);
           --0123456789abcdef    
-    s_a <= "0000000000000100";
+    s_a <= "0000000000000100",
+           "0000100000000000" after 35 ns,
+           "0000000000000001" after 60 ns;
     s_b <= "0000000000000100";
     
-    s_opc <= "0000" after 5 ns,
+    s_opc <= "0000" ,
              "0001" after 10 ns,   
              "0010" after 15 ns,
              "0011" after 20 ns,
              "0100" after 25 ns,
-             "0101" after 30 ns;
+             "0101" after 30 ns,
+             "0000" after 35 ns,
+             "0001" after 40 ns,
+             "0010" after 45 ns,
+             "0011" after 50 ns,
+             "0100" after 55 ns,
+             "0101" after 60 ns,
+             "0000" after 65 ns,
+             "0001" after 70 ns,   
+             "0010" after 75 ns,
+             "0011" after 80 ns,
+             "0100" after 85 ns,
+             "0101" after 90 ns;
+      
+            
 end Behavioral;
