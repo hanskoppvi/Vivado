@@ -1,0 +1,4 @@
+Running: xsim.dir/ice_rfdecode_test_behav/xsimk.exe -simmode gui -wdb ice_rfdecode_test_behav.wdb -simrunnum 0 -socket 56370
+Design successfully loaded
+Design Loading Memory Usage: 5072 KB (Peak: 5072 KB)
+Design Loading CPU Usage: 77 ms

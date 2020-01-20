@@ -41,23 +41,23 @@ architecture Behavioral of ice_rfdecode is
 
 begin
           
-            
-    sel <= "0000000000000000" when addr = "0000" and en = '1' else
-           "0000000000000001" when addr = "0001" and en = '1' else
-           "0000000000000010" when addr = "0010" and en = '1' else
-           "0000000000000100" when addr = "0011" and en = '1' else
-           "0000000000001000" when addr = "0100" and en = '1' else
-           "0000000000010000" when addr = "0101" and en = '1' else
-           "0000000000100000" when addr = "0110" and en = '1' else
-           "0000000001000000" when addr = "0111" and en = '1' else
-           "0000000010000000" when addr = "1000" and en = '1' else
-           "0000000100000000" when addr = "1001" and en = '1' else
-           "0000001000000000" when addr = "1010" and en = '1' else
-           "0000010000000000" when addr = "1011" and en = '1' else
-           "0000100000000000" when addr = "1100" and en = '1' else
-           "0001000000000000" when addr = "1101" and en = '1' else
-           "0010000000000000" when addr = "1110" and en = '1' else
-           "0100000000000000" when addr = "1111" and en = '1' else
+          --0123456789abcdef 
+    sel <= "0000000000000001" when addr = "0000" and en = '1' else
+           "0000000000000010" when addr = "0001" and en = '1' else
+           "0000000000000100" when addr = "0010" and en = '1' else
+           "0000000000001000" when addr = "0011" and en = '1' else
+           "0000000000010000" when addr = "0100" and en = '1' else
+           "0000000000100000" when addr = "0101" and en = '1' else
+           "0000000001000000" when addr = "0110" and en = '1' else
+           "0000000010000000" when addr = "0111" and en = '1' else
+           "0000000100000000" when addr = "1000" and en = '1' else
+           "0000001000000000" when addr = "1001" and en = '1' else
+           "0000010000000000" when addr = "1010" and en = '1' else
+           "0000100000000000" when addr = "1011" and en = '1' else
+           "0001000000000000" when addr = "1100" and en = '1' else
+           "0010000000000000" when addr = "1101" and en = '1' else
+           "0100000000000000" when addr = "1110" and en = '1' else
+           "1000000000000000" when addr = "1111" and en = '1' else
            "0000000000000000";
            
            
