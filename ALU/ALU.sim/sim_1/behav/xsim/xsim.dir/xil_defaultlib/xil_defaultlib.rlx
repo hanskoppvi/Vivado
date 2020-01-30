@@ -4,6 +4,7 @@ Oct 24 2019
 19:01:44
 D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/RealTestShi.vhd,1574317279,vhdl,,,,realtestshi,,,,,,,,
 D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/ice_rfdecode_test.vhd,1579511152,vhdl,,,,ice_rfdecode_test,,,,,,,,
+D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/ice_uart_tb.vhd,1580310156,vhdl,,,,ice_uart_tb,,,,,,,,
 D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/test_alu.vhd,1576135955,vhdl,,,,test_alu,,,,,,,,
 D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/test_alu_cmp.vhd,1576739178,vhdl,,,,test_alu_cmp,,,,,,,,
 D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/test_alu_integration.vhd,1576091997,vhdl,,,,test_alu_integration,,,,,,,,
@@ -18,4 +19,5 @@ D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sources_1/new/ice_reg.vhd,1576740133
 D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sources_1/new/ice_rf_gen.vhd,1579507942,vhdl,D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/ice_rfdecode_test.vhd,,,ice_rf_gen,,,,,,,,
 D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sources_1/new/ice_rfdecode.vhd,1579510933,vhdl,D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/test_decode.vhd,,,ice_rfdecode,,,,,,,,
 D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sources_1/new/ice_shifter.vhd,1573719073,vhdl,D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/RealTestShi.vhd,,,ice_shifter,,,,,,,,
+D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sources_1/new/ice_uart.vhd,1580309523,vhdl,D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sim_1/new/ice_uart_tb.vhd,,,ice_uart,,,,,,,,
 D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.srcs/sources_1/new/test_alu_pc.vhd,1575381512,vhdl,,,,test_alu_pc,,,,,,,,

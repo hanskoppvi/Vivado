@@ -2,3 +2,6 @@ Running: xsim.dir/ice_rfdecode_test_behav/xsimk.exe -simmode gui -wdb ice_rfdeco
 Design successfully loaded
 Design Loading Memory Usage: 5072 KB (Peak: 5072 KB)
 Design Loading CPU Usage: 77 ms
+Simulation completed
+Simulation Memory Usage: 5840 KB (Peak: 5840 KB)
+Simulation CPU Usage: 358 ms

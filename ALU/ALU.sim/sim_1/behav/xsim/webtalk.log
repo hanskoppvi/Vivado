@@ -2,13 +2,13 @@
 # Webtalk v2019.2 (64-bit)
 # SW Build 2700185 on Thu Oct 24 18:46:05 MDT 2019
 # IP Build 2699827 on Thu Oct 24 21:16:38 MDT 2019
-# Start of session at: Mon Jan 20 09:13:12 2020
-# Process ID: 12364
+# Start of session at: Wed Jan 29 13:21:39 2020
+# Process ID: 6248
 # Current directory: D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.sim/sim_1/behav/xsim/xsim.dir/ice_rfdecode_test_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.sim/sim_1/behav/xsim/xsim.dir/ice_uart_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.sim/sim_1/behav/xsim/xsim.dir/ice_rfdecode_test_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.sim/sim_1/behav/xsim/xsim.dir/ice_rfdecode_test_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Jan 20 09:13:17 2020. For additional details about this file, please refer to the WebTalk help file at D:/Programas/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Mon Jan 20 09:13:17 2020...
+source D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.sim/sim_1/behav/xsim/xsim.dir/ice_uart_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/Datos/Desktop/Vivado/Vivado/ALU/ALU.sim/sim_1/behav/xsim/xsim.dir/ice_uart_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Jan 29 13:21:43 2020. For additional details about this file, please refer to the WebTalk help file at D:/Programas/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Jan 29 13:21:43 2020...

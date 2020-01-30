@@ -83,10 +83,7 @@ begin
                                      en   => wp_en,
                                      sel  => s_dec_sel);
     
-    --s_dec_en   <= wp_en;
-    
-    --s_wp_data <= wp_data;
-    
+
     preg : for i in 15 downto 0 generate
         regx : ice_reg port map (clk   => clk, 
                              reset => reset,
